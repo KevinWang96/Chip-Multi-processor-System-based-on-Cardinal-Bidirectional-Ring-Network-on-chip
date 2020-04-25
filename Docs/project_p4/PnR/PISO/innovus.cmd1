@@ -1,0 +1,67 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sun Apr  5 12:02:32 2020                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v16.20-p002_1 (64bit) 11/08/2016 11:31 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 16.20-p002_1 NR161103-1425/16_20-UB (database version 2.30, 354.6.1) {superthreading v1.34}
+#@(#)CDS: AAE 16.20-p004 (64bit) 11/08/2016 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 16.20-p008_1 () Oct 29 2016 08:26:57 ( )
+#@(#)CDS: SYNTECH 16.20-p001_1 () Oct 27 2016 11:33:00 ( )
+#@(#)CDS: CPE v16.20-p011
+#@(#)CDS: IQRC/TQRC 15.2.5-s803 (64bit) Tue Sep 13 18:23:58 PDT 2016 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getDrawView
+loadWorkspace -name Physical
+win
+set init_lef_file include/gscl45nm.lef
+set init_verilog netlist/PISO.syn.v
+set init_mmmc_file ../dff_golden_syn/Default.view
+set init_top_cell PISO
+init_design
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site CoreSite -s 20 20 5 5 5 5
+uiSetTool select
+getIoFlowFlag
+fit
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setUsefulSkewMode -maxSkew false -noBoundary false -useCells {CLKBUF3 CLKBUF2 CLKBUF1 BUFX4 BUFX2 INVX8 INVX4 INVX2 INVX1} -maxAllowedDelay 1
+setPlaceMode -reset
+setPlaceMode -congEffort auto -timingDriven 1 -modulePlan 1 -clkGateAware 0 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 1 -placeIOPins 1 -moduleAwareSpare 0 -checkPinLayerForAccess {  1 } -preserveRouting 0 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+setPlaceMode -fp false
+placeDesign
+uiSetTool util
+uiSetTool util
+queryDensityInBox 4.9335 4.4745 25.034 25.172
+uiSetTool util
+queryDensityInBox 4.8415 4.704 24.8965 25.08
+queryDensityInBox 14.892 10.9455 14.892 10.9455
+setNanoRouteMode -quiet -timingEngine {}
+setNanoRouteMode -quiet -routeWithSiPostRouteFix 0
+setNanoRouteMode -quiet -drouteStartIteration default
+setNanoRouteMode -quiet -routeTopRoutingLayer default
+setNanoRouteMode -quiet -routeBottomRoutingLayer default
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+setDrawView place
+dumpToGIF PISO
+dumpToGIF PISO.gif
+streamOut netlist/PISO.gds2 -mapFile include/gscl45nm.map -libName PISO.syn -structureName PISO.syn -units 2000 -mode ALL
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+encMessage warning 1
+encMessage debug 0
+encMessage info 1

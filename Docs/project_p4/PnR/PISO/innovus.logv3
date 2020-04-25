@@ -1,0 +1,200 @@
+[04/05 12:26:10      0s] 
+[04/05 12:26:10      0s] Cadence Innovus(TM) Implementation System.
+[04/05 12:26:10      0s] Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
+[04/05 12:26:10      0s] 
+[04/05 12:26:10      0s] Version:	v16.20-p002_1, built Tue Nov 8 11:31:23 PST 2016
+[04/05 12:26:10      0s] Options:	
+[04/05 12:26:10      0s] Date:		Sun Apr  5 12:26:10 2020
+[04/05 12:26:10      0s] Host:		viterbi-scf2 (x86_64 w/Linux 3.10.0-957.el7.x86_64) (14cores*112cpus*Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz 19712KB)
+[04/05 12:26:10      0s] OS:		CentOS Linux release 7.6.1810 (Core) 
+[04/05 12:26:10      0s] 
+[04/05 12:26:10      0s] License:
+[04/05 12:26:11      0s] 		invs	Innovus Implementation System	16.2	checkout succeeded
+[04/05 12:26:11      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[04/05 12:26:12      0s] **ERROR: (IMPOAX-142):	Could not open shared library libinnovusoax22.so : /usr/local/cadence/INNOVUS162/tools/lib/64bit/libinnovusoax22.so: undefined symbol: _ZTIN12OpenAccess_418oaConflictObserverINS_8oaAppDefELj0EEE
+[04/05 12:26:12      0s] 
+[04/05 12:26:12      0s] **ERROR: (IMPOAX-142):	Could not open shared library libcdsSkillPcell.so : /usr/local/cadence/INNOVUS162/tools/lib/64bit/libcdsSkillPcell.so: undefined symbol: _ZTIN12OpenAccess_413oaFSComponentE
+[04/05 12:26:12      0s] 
+[04/05 12:26:12      0s] **ERROR: (IMPOAX-142):	OA features will be disabled in this session.
+[04/05 12:26:12      0s] 
+[04/05 12:26:19      6s] @(#)CDS: Innovus v16.20-p002_1 (64bit) 11/08/2016 11:31 (Linux 2.6.18-194.el5)
+[04/05 12:26:19      6s] @(#)CDS: NanoRoute 16.20-p002_1 NR161103-1425/16_20-UB (database version 2.30, 354.6.1) {superthreading v1.34}
+[04/05 12:26:19      6s] @(#)CDS: AAE 16.20-p004 (64bit) 11/08/2016 (Linux 2.6.18-194.el5)
+[04/05 12:26:19      6s] @(#)CDS: CTE 16.20-p008_1 () Oct 29 2016 08:26:57 ( )
+[04/05 12:26:19      6s] @(#)CDS: SYNTECH 16.20-p001_1 () Oct 27 2016 11:33:00 ( )
+[04/05 12:26:19      6s] @(#)CDS: CPE v16.20-p011
+[04/05 12:26:19      6s] @(#)CDS: IQRC/TQRC 15.2.5-s803 (64bit) Tue Sep 13 18:23:58 PDT 2016 (Linux 2.6.18-194.el5)
+[04/05 12:26:19      6s] @(#)CDS: OA 22.50-p051 Thu Aug  4 00:05:16 2016
+[04/05 12:26:19      6s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[04/05 12:26:19      6s] @(#)CDS: RCDB 11.8
+[04/05 12:26:19      6s] --- Running on viterbi-scf2 (x86_64 w/Linux 3.10.0-957.el7.x86_64) (14cores*112cpus*Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz 19712KB) ---
+[04/05 12:26:19      6s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_2208_viterbi-scf2_sooryara_cERj3c.
+
+[04/05 12:26:19      7s] 
+[04/05 12:26:19      7s] **INFO:  MMMC transition support version v31-84 
+[04/05 12:26:19      7s] 
+[04/05 12:26:19      7s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[04/05 12:26:19      7s] <CMD> suppressMessage ENCEXT-2799
+[04/05 12:26:19      7s] **ERROR: (IMPSYT-6689):	Invalid return code while sourcing "/usr/local/cadence/IC617/share/lpa/etc/lpawrapper/tcl/InShape/Encounter.tcl". Check and correct your Tcl script regarding below message:
+[04/05 12:26:19      7s]  couldn't read file "/usr/local/cadence/IC617/tools/bin/../tools.lnx86/lpa/bin/64bit/etc/lpawrapper/tcl/InShape/FixingHint.tcl": no such file or directory
+[04/05 12:26:20      7s] <CMD> getDrawView
+[04/05 12:26:20      7s] <CMD> loadWorkspace -name Physical
+[04/05 12:26:20      7s] <CMD> win
+[04/05 12:27:03      8s] <CMD> getCTSMode -engine -quiet
+[04/05 12:27:05      9s] <CMD> getCTSMode -engine -quiet
+[04/05 12:28:32     12s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:28:32     12s] 
+[04/05 12:28:32     12s] **ERROR: (IMPOAX-850):	getG2Libs command cannot be run as OA features are disabled in this session.
+[04/05 12:28:32     12s] **ERROR: (IMPQTF-4044):	Error happens when execute '::Rda_Design::Input:getOALibList Rda_Input' with error message: ''.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+[04/05 12:28:33     12s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:28:33     12s] 
+[04/05 12:28:33     12s] **ERROR: (IMPOAX-850):	getG2Libs command cannot be run as OA features are disabled in this session.
+[04/05 12:28:33     12s] **ERROR: (IMPQTF-4044):	Error happens when execute '::Rda_Design::Input:getOALibList Rda_Input' with error message: ''.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+[04/05 12:28:51     13s] <CMD> set init_io_file netlist/PISO.gds
+[04/05 12:28:51     13s] <CMD> init_design
+[04/05 12:28:51     13s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:28:51     13s] 
+[04/05 12:28:51     13s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:28:51     13s] **WARN: (GLOBAL-100):	Global 'timing_disable_backward_compatible_mmmc_mode' has become obsolete. It will be removed in the next release.
+[04/05 12:28:53     13s] **ERROR: **ERROR: (IMPIMEX-3):	There is no verilog netlist found in init_verilog. The variable is either not specified or specified incorrectly. Check the location of Verilog file in the global file.
+[04/05 12:28:53     13s] 
+[04/05 12:29:05     13s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:29:05     13s] 
+[04/05 12:29:05     13s] **ERROR: (IMPOAX-850):	getG2Libs command cannot be run as OA features are disabled in this session.
+[04/05 12:29:05     13s] **ERROR: (IMPQTF-4044):	Error happens when execute '::Rda_Design::Input:getOALibList Rda_Input' with error message: ''.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+[04/05 12:29:16     13s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:29:16     13s] 
+[04/05 12:29:16     13s] **ERROR: (IMPOAX-850):	getG2Views command cannot be run as OA features are disabled in this session.
+[04/05 12:29:16     13s] **ERROR: (IMPQTF-4044):	Error happens when execute '::Rda_Design::Input:getOAViewList Rda_Input' with error message: ''.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+[04/05 12:29:16     13s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:29:16     13s] 
+[04/05 12:29:16     13s] **ERROR: (IMPOAX-850):	getG2Views command cannot be run as OA features are disabled in this session.
+[04/05 12:29:16     13s] **ERROR: (IMPQTF-4044):	Error happens when execute '::Rda_Design::Input:getOAViewList Rda_Input' with error message: ''.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+[04/05 12:30:03     15s] <CMD> set init_lef_file include/gscl45nm.lef
+[04/05 12:30:03     15s] <CMD> set init_design_netlisttype Verilog
+[04/05 12:30:03     15s] <CMD> set init_verilog netlist/PISO.syn.v
+[04/05 12:30:03     15s] <CMD> set init_mmmc_file Default.view
+[04/05 12:30:03     15s] <CMD> set init_top_cell PISO
+[04/05 12:30:03     16s] <CMD> init_design
+[04/05 12:30:03     16s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:03     16s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:03     16s] 
+[04/05 12:30:03     16s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:03     16s] #- Begin Load MMMC data ... (date=04/05 12:30:03, mem=491.3M)
+[04/05 12:30:03     16s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:08     16s] <CMD> set init_lef_file include/gscl45nm.lef
+[04/05 12:30:08     16s] <CMD> set init_design_netlisttype Verilog
+[04/05 12:30:08     16s] <CMD> set init_verilog netlist/PISO.syn.v
+[04/05 12:30:08     16s] <CMD> set init_mmmc_file Default.view
+[04/05 12:30:08     16s] <CMD> set init_top_cell PISO
+[04/05 12:30:08     16s] <CMD> init_design
+[04/05 12:30:08     16s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:08     16s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:08     16s] 
+[04/05 12:30:08     16s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:08     16s] - Begin Load MMMC data ... (date=04/05 12:30:08, mem=492.8M)
+[04/05 12:30:08     16s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:11     16s] <CMD> set init_lef_file include/gscl45nm.lef
+[04/05 12:30:11     16s] <CMD> set init_design_netlisttype Verilog
+[04/05 12:30:11     16s] <CMD> set init_verilog netlist/PISO.syn.v
+[04/05 12:30:11     16s] <CMD> set init_mmmc_file Default.view
+[04/05 12:30:11     16s] <CMD> set init_top_cell PISO
+[04/05 12:30:11     16s] <CMD> init_design
+[04/05 12:30:11     16s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:11     16s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:11     16s] 
+[04/05 12:30:11     16s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:11     16s] - Begin Load MMMC data ... (date=04/05 12:30:11, mem=492.8M)
+[04/05 12:30:11     16s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:16     16s] <CMD> init_design
+[04/05 12:30:16     16s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:16     16s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:16     16s] 
+[04/05 12:30:16     16s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:16     16s] - Begin Load MMMC data ... (date=04/05 12:30:16, mem=492.8M)
+[04/05 12:30:16     16s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:26     16s] <CMD> init_design
+[04/05 12:30:26     16s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:26     16s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:26     16s] 
+[04/05 12:30:26     16s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:26     16s] - Begin Load MMMC data ... (date=04/05 12:30:26, mem=492.8M)
+[04/05 12:30:26     16s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:26     16s] <CMD> init_design
+[04/05 12:30:26     16s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:26     16s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:26     16s] 
+[04/05 12:30:26     16s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:26     16s] - Begin Load MMMC data ... (date=04/05 12:30:26, mem=492.8M)
+[04/05 12:30:26     16s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:26     16s] <CMD> init_design
+[04/05 12:30:26     16s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:26     16s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:26     16s] 
+[04/05 12:30:26     16s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:26     16s] - Begin Load MMMC data ... (date=04/05 12:30:26, mem=492.8M)
+[04/05 12:30:26     16s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:26     16s] <CMD> init_design
+[04/05 12:30:26     16s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:26     16s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:26     16s] 
+[04/05 12:30:26     16s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:26     16s] - Begin Load MMMC data ... (date=04/05 12:30:26, mem=492.8M)
+[04/05 12:30:26     16s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:27     16s] <CMD> init_design
+[04/05 12:30:27     16s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:27     16s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:27     16s] 
+[04/05 12:30:27     16s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:27     16s] - Begin Load MMMC data ... (date=04/05 12:30:27, mem=492.8M)
+[04/05 12:30:27     16s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:27     16s] <CMD> init_design
+[04/05 12:30:27     16s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:27     17s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:27     17s] 
+[04/05 12:30:27     17s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:27     17s] - Begin Load MMMC data ... (date=04/05 12:30:27, mem=492.8M)
+[04/05 12:30:27     17s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:27     17s] <CMD> init_design
+[04/05 12:30:27     17s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:27     17s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:27     17s] 
+[04/05 12:30:27     17s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:27     17s] - Begin Load MMMC data ... (date=04/05 12:30:27, mem=492.8M)
+[04/05 12:30:27     17s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:27     17s] <CMD> init_design
+[04/05 12:30:27     17s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:27     17s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:27     17s] 
+[04/05 12:30:27     17s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:27     17s] - Begin Load MMMC data ... (date=04/05 12:30:27, mem=492.8M)
+[04/05 12:30:27     17s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:27     17s] <CMD> init_design
+[04/05 12:30:27     17s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:27     17s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:27     17s] 
+[04/05 12:30:27     17s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:27     17s] - Begin Load MMMC data ... (date=04/05 12:30:27, mem=492.8M)
+[04/05 12:30:27     17s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:34     17s] <CMD> init_design
+[04/05 12:30:34     17s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[04/05 12:30:34     17s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:30:34     17s] 
+[04/05 12:30:34     17s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:30:34     17s] - Begin Load MMMC data ... (date=04/05 12:30:34, mem=492.8M)
+[04/05 12:30:34     17s] **ERROR: (TCLCMD-989):	cannot open SDC file 'netlist/frequency_divider_by3.sdc' for mode 'test_cm'
+[04/05 12:30:41     17s] 
+[04/05 12:30:41     17s] *** Memory Usage v#1 (Current mem = 492.801M, initial mem = 169.012M) ***
+[04/05 12:30:41     17s] 
+[04/05 12:30:41     17s] *** Summary of all messages that are not suppressed in this session:
+[04/05 12:30:41     17s] Severity  ID               Count  Summary                                  
+[04/05 12:30:41     17s] ERROR     IMPSYT-6689          1  Invalid return code while sourcing "%s"....
+[04/05 12:30:41     17s] ERROR     IMPSYT-6729          1  %s                                       
+[04/05 12:30:41     17s] ERROR     IMPOAX-142           3  %s                                       
+[04/05 12:30:41     17s] ERROR     IMPOAX-820          20  The OA features are disabled in the curr...
+[04/05 12:30:41     17s] ERROR     IMPOAX-850          20  %s command cannot be run as OA features ...
+[04/05 12:30:41     17s] ERROR     IMPQTF-4044          5  Error happens when execute '%s' with err...
+[04/05 12:30:41     17s] ERROR     IMPIMEX-3            1  There is no verilog netlist found in ini...
+[04/05 12:30:41     17s] *** Message Summary: 0 warning(s), 51 error(s)
+[04/05 12:30:41     17s] 
+[04/05 12:30:41     17s] --- Ending "Innovus" (totcpu=0:00:17.6, real=0:04:31, mem=492.8M) ---

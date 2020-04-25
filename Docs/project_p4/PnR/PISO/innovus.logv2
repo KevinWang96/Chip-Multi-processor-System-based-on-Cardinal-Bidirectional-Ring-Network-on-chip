@@ -1,0 +1,105 @@
+[04/05 12:23:58      0s] 
+[04/05 12:23:58      0s] Cadence Innovus(TM) Implementation System.
+[04/05 12:23:58      0s] Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
+[04/05 12:23:58      0s] 
+[04/05 12:23:58      0s] Version:	v16.20-p002_1, built Tue Nov 8 11:31:23 PST 2016
+[04/05 12:23:58      0s] Options:	
+[04/05 12:23:58      0s] Date:		Sun Apr  5 12:23:58 2020
+[04/05 12:23:58      0s] Host:		viterbi-scf2 (x86_64 w/Linux 3.10.0-957.el7.x86_64) (14cores*112cpus*Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz 19712KB)
+[04/05 12:23:58      0s] OS:		CentOS Linux release 7.6.1810 (Core) 
+[04/05 12:23:58      0s] 
+[04/05 12:23:58      0s] License:
+[04/05 12:23:59      0s] 		invs	Innovus Implementation System	16.2	checkout succeeded
+[04/05 12:23:59      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[04/05 12:23:59      0s] **ERROR: (IMPOAX-142):	Could not open shared library libinnovusoax22.so : /usr/local/cadence/INNOVUS162/tools/lib/64bit/libinnovusoax22.so: undefined symbol: _ZTIN12OpenAccess_418oaConflictObserverINS_8oaAppDefELj0EEE
+[04/05 12:23:59      0s] 
+[04/05 12:23:59      0s] **ERROR: (IMPOAX-142):	Could not open shared library libcdsSkillPcell.so : /usr/local/cadence/INNOVUS162/tools/lib/64bit/libcdsSkillPcell.so: undefined symbol: _ZTIN12OpenAccess_413oaFSComponentE
+[04/05 12:23:59      0s] 
+[04/05 12:23:59      0s] **ERROR: (IMPOAX-142):	OA features will be disabled in this session.
+[04/05 12:23:59      0s] 
+[04/05 12:24:07      6s] @(#)CDS: Innovus v16.20-p002_1 (64bit) 11/08/2016 11:31 (Linux 2.6.18-194.el5)
+[04/05 12:24:07      6s] @(#)CDS: NanoRoute 16.20-p002_1 NR161103-1425/16_20-UB (database version 2.30, 354.6.1) {superthreading v1.34}
+[04/05 12:24:07      6s] @(#)CDS: AAE 16.20-p004 (64bit) 11/08/2016 (Linux 2.6.18-194.el5)
+[04/05 12:24:07      6s] @(#)CDS: CTE 16.20-p008_1 () Oct 29 2016 08:26:57 ( )
+[04/05 12:24:07      6s] @(#)CDS: SYNTECH 16.20-p001_1 () Oct 27 2016 11:33:00 ( )
+[04/05 12:24:07      6s] @(#)CDS: CPE v16.20-p011
+[04/05 12:24:07      6s] @(#)CDS: IQRC/TQRC 15.2.5-s803 (64bit) Tue Sep 13 18:23:58 PDT 2016 (Linux 2.6.18-194.el5)
+[04/05 12:24:07      6s] @(#)CDS: OA 22.50-p051 Thu Aug  4 00:05:16 2016
+[04/05 12:24:07      6s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[04/05 12:24:07      6s] @(#)CDS: RCDB 11.8
+[04/05 12:24:07      6s] --- Running on viterbi-scf2 (x86_64 w/Linux 3.10.0-957.el7.x86_64) (14cores*112cpus*Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz 19712KB) ---
+[04/05 12:24:07      6s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_743_viterbi-scf2_sooryara_aEPReC.
+
+[04/05 12:24:07      7s] 
+[04/05 12:24:07      7s] **INFO:  MMMC transition support version v31-84 
+[04/05 12:24:07      7s] 
+[04/05 12:24:07      7s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[04/05 12:24:07      7s] <CMD> suppressMessage ENCEXT-2799
+[04/05 12:24:07      7s] **ERROR: (IMPSYT-6689):	Invalid return code while sourcing "/usr/local/cadence/IC617/share/lpa/etc/lpawrapper/tcl/InShape/Encounter.tcl". Check and correct your Tcl script regarding below message:
+[04/05 12:24:07      7s]  couldn't read file "/usr/local/cadence/IC617/tools/bin/../tools.lnx86/lpa/bin/64bit/etc/lpawrapper/tcl/InShape/FixingHint.tcl": no such file or directory
+[04/05 12:24:07      7s] <CMD> getDrawView
+[04/05 12:24:07      7s] <CMD> loadWorkspace -name Physical
+[04/05 12:24:07      7s] <CMD> win
+[04/05 12:24:41      8s] <CMD> encMessage warning 0
+[04/05 12:24:41      8s] Suppress "**WARN ..." messages.
+[04/05 12:24:41      8s] <CMD> encMessage debug 0
+[04/05 12:24:41      8s] <CMD> encMessage info 0
+[04/05 12:24:41      8s] **ERROR: (IMPSYT-6300):	Failed to execute command 'source'. For more details, refer to error message: invalid command name "À€À€À€À€Ã¤À€À€À€"
+[04/05 12:26:03     10s] <CMD> set init_verilog netlist/PISO.gds2
+[04/05 12:26:03     10s] <CMD> init_design
+[04/05 12:26:03     10s] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[04/05 12:26:03     10s] 
+[04/05 12:26:03     10s] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[04/05 12:26:03     10s] **WARN: (GLOBAL-100):	Global 'timing_disable_backward_compatible_mmmc_mode' has become obsolete. It will be removed in the next release.
+[04/05 12:26:03     10s] No LEF file provided, but timing lib is provided.
+[04/05 12:26:03     10s] Use timer mode.
+[04/05 12:26:03     10s] *** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.18min, fe_real=2.08min, fe_mem=492.6M) ***
+[04/05 12:26:03     10s] #- Begin Load netlist data ... (date=04/05 12:26:03, mem=492.6M)
+[04/05 12:26:03     10s] *** Begin netlist parsing (mem=492.6M) ***
+[04/05 12:26:03     10s] Created 0 new cells from 0 timing libraries.
+[04/05 12:26:03     10s] Reading netlist ...
+[04/05 12:26:03     10s] Backslashed names will retain backslash and a trailing blank character.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 1 near the text - for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 1 near the text - for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 1 near the text PISO for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 1 near the text . for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 1 near the text syn for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 1 near the text > for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 1 near the text S for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 1 near the text 9 for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 1 near the text "\ÐM­( for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 1 near the text DFFPOSX1 for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 1 near the text s for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 1 near the text ` for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 1 near the text | for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 2 near the text DFFPOSX1 for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 2 near the text X for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 3 near the text DFFPOSX1 for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 3 near the text s for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 4 near the text DFFPOSX1 for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 4 near the text 5p for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **ERROR: (IMPVL-209):	In Verilog file 'netlist/PISO.gds2', check line 5 near the text DFFPOSX1 for the issue: 'syntax error'.  Update the text accordingly.
+[04/05 12:26:03     10s] Type 'man IMPVL-209' for more detail.
+[04/05 12:26:03     10s] **WARN: (EMS-27):	Message (IMPVL-209) has exceeded the current message display limit of 20.
+[04/05 12:26:03     10s] To increase the message display limit, refer to the product command reference manual.
+[04/05 12:26:03     10s] **FATAL ERROR: [/vols/cm_t1nb_006/INNOVUS162/Rel/16.20/main/lnx86_64_opt/16.20-p002_1/fe/src/vl/vlVerilogLex.l:1006:vlVerilog_yyerror]: Too many errors in verilog file netlist/PISO.gds2 ... aborting
+[04/05 12:26:03     10s] Exiting due to previous fatal error.

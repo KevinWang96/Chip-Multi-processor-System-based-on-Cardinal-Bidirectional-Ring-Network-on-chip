@@ -1,0 +1,56 @@
+[04/05 12:01:29      0s] 
+[04/05 12:01:29      0s] Cadence Innovus(TM) Implementation System.
+[04/05 12:01:29      0s] Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
+[04/05 12:01:29      0s] 
+[04/05 12:01:29      0s] Version:	v16.20-p002_1, built Tue Nov 8 11:31:23 PST 2016
+[04/05 12:01:29      0s] Options:	
+[04/05 12:01:29      0s] Date:		Sun Apr  5 12:01:29 2020
+[04/05 12:01:29      0s] Host:		viterbi-scf2 (x86_64 w/Linux 3.10.0-957.el7.x86_64) (14cores*112cpus*Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz 19712KB)
+[04/05 12:01:29      0s] OS:		CentOS Linux release 7.6.1810 (Core) 
+[04/05 12:01:29      0s] 
+[04/05 12:01:29      0s] License:
+[04/05 12:01:29      0s] 		invs	Innovus Implementation System	16.2	checkout succeeded
+[04/05 12:01:29      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[04/05 12:01:30      0s] **ERROR: (IMPOAX-142):	Could not open shared library libinnovusoax22.so : /usr/local/cadence/INNOVUS162/tools/lib/64bit/libinnovusoax22.so: undefined symbol: _ZTIN12OpenAccess_418oaConflictObserverINS_8oaAppDefELj0EEE
+[04/05 12:01:30      0s] 
+[04/05 12:01:30      0s] **ERROR: (IMPOAX-142):	Could not open shared library libcdsSkillPcell.so : /usr/local/cadence/INNOVUS162/tools/lib/64bit/libcdsSkillPcell.so: undefined symbol: _ZTIN12OpenAccess_413oaFSComponentE
+[04/05 12:01:30      0s] 
+[04/05 12:01:30      0s] **ERROR: (IMPOAX-142):	OA features will be disabled in this session.
+[04/05 12:01:30      0s] 
+[04/05 12:01:37      6s] @(#)CDS: Innovus v16.20-p002_1 (64bit) 11/08/2016 11:31 (Linux 2.6.18-194.el5)
+[04/05 12:01:37      6s] @(#)CDS: NanoRoute 16.20-p002_1 NR161103-1425/16_20-UB (database version 2.30, 354.6.1) {superthreading v1.34}
+[04/05 12:01:37      6s] @(#)CDS: AAE 16.20-p004 (64bit) 11/08/2016 (Linux 2.6.18-194.el5)
+[04/05 12:01:37      6s] @(#)CDS: CTE 16.20-p008_1 () Oct 29 2016 08:26:57 ( )
+[04/05 12:01:37      6s] @(#)CDS: SYNTECH 16.20-p001_1 () Oct 27 2016 11:33:00 ( )
+[04/05 12:01:37      6s] @(#)CDS: CPE v16.20-p011
+[04/05 12:01:37      6s] @(#)CDS: IQRC/TQRC 15.2.5-s803 (64bit) Tue Sep 13 18:23:58 PDT 2016 (Linux 2.6.18-194.el5)
+[04/05 12:01:37      6s] @(#)CDS: OA 22.50-p051 Thu Aug  4 00:05:16 2016
+[04/05 12:01:37      6s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[04/05 12:01:37      6s] @(#)CDS: RCDB 11.8
+[04/05 12:01:37      6s] --- Running on viterbi-scf2 (x86_64 w/Linux 3.10.0-957.el7.x86_64) (14cores*112cpus*Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz 19712KB) ---
+[04/05 12:01:37      6s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_440950_viterbi-scf2_sooryara_I372Wk.
+
+[04/05 12:01:37      7s] 
+[04/05 12:01:37      7s] **INFO:  MMMC transition support version v31-84 
+[04/05 12:01:37      7s] 
+[04/05 12:01:37      7s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[04/05 12:01:37      7s] <CMD> suppressMessage ENCEXT-2799
+[04/05 12:01:37      7s] **ERROR: (IMPSYT-6689):	Invalid return code while sourcing "/usr/local/cadence/IC617/share/lpa/etc/lpawrapper/tcl/InShape/Encounter.tcl". Check and correct your Tcl script regarding below message:
+[04/05 12:01:37      7s]  couldn't read file "/usr/local/cadence/IC617/tools/bin/../tools.lnx86/lpa/bin/64bit/etc/lpawrapper/tcl/InShape/FixingHint.tcl": no such file or directory
+[04/05 12:01:38      7s] <CMD> getDrawView
+[04/05 12:01:38      7s] <CMD> loadWorkspace -name Physical
+[04/05 12:01:38      7s] <CMD> win
+[04/05 12:02:12      8s] invalid command name "quit"
+[04/05 12:02:15      8s] invalid command name "quit"
+[04/05 12:02:17      8s] **INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+[04/05 12:02:17      8s] Innovus terminated by user interrupt.
+[04/05 12:02:17      8s] 
+[04/05 12:02:17      8s] *** Memory Usage v#1 (Current mem = 468.988M, initial mem = 169.012M) ***
+[04/05 12:02:17      8s] 
+[04/05 12:02:17      8s] *** Summary of all messages that are not suppressed in this session:
+[04/05 12:02:17      8s] Severity  ID               Count  Summary                                  
+[04/05 12:02:17      8s] ERROR     IMPSYT-6689          1  Invalid return code while sourcing "%s"....
+[04/05 12:02:17      8s] ERROR     IMPOAX-142           3  %s                                       
+[04/05 12:02:17      8s] *** Message Summary: 0 warning(s), 4 error(s)
+[04/05 12:02:17      8s] 
+[04/05 12:02:17      8s] --- Ending "Innovus" (totcpu=0:00:08.4, real=0:00:48.0, mem=469.0M) ---

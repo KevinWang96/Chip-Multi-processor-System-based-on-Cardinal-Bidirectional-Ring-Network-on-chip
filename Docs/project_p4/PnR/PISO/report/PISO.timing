@@ -1,0 +1,69 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : PISO
+Version: K-2015.06-SP5-5
+Date   : Sun Apr  5 12:01:18 2020
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: temp_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: temp_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  temp_reg[1]/CLK (DFFPOSX1)               0.00       0.00 r
+  temp_reg[1]/Q (DFFPOSX1)                 0.10       0.10 f
+  U19/Y (AOI22X1)                          0.03       0.14 r
+  U20/Y (BUFX2)                            0.03       0.17 r
+  U27/Y (INVX1)                            0.01       0.19 f
+  temp_reg[0]/D (DFFPOSX1)                 0.00       0.19 f
+  data arrival time                                   0.19
+
+  clock clk (rise edge)                    5.00       5.00
+  clock network delay (ideal)              0.00       5.00
+  temp_reg[0]/CLK (DFFPOSX1)               0.00       5.00 r
+  library setup time                      -0.06       4.94
+  data required time                                  4.94
+  -----------------------------------------------------------
+  data required time                                  4.94
+  data arrival time                                  -0.19
+  -----------------------------------------------------------
+  slack (MET)                                         4.76
+
+
+  Startpoint: q_reg (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: q (output port)
+  Path Group: default
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg/CLK (DFFPOSX1)                     0.00       0.00 r
+  q_reg/Q (DFFPOSX1)                       0.10       0.10 f
+  q (out)                                  0.00       0.10 f
+  data arrival time                                   0.10
+
+  max_delay                                5.00       5.00
+  output external delay                    0.00       5.00
+  data required time                                  5.00
+  -----------------------------------------------------------
+  data required time                                  5.00
+  data arrival time                                  -0.10
+  -----------------------------------------------------------
+  slack (MET)                                         4.90
+
+
+1

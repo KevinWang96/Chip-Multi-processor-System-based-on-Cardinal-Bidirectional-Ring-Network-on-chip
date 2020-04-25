@@ -1,0 +1,62 @@
+$date
+    Nov 20, 2019  11:58:21
+$end
+$version
+    TOOL:	xmsim(64)	17.04-s014
+$end
+$timescale
+    10 ps
+$end
+
+$scope module tb_clock $end
+
+$scope module freq1 $end
+$var wire      1 !    clk  $end
+$var wire      1 "    rst  $end
+$var wire      1 #    clk_out  $end
+$var reg       2 $    pos_count [1:0] $end
+$var reg       2 %    neg_count [1:0] $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+0!
+0"
+x#
+bx $
+b0 %
+$end
+#250
+1!
+b0 $
+0#
+#500
+0!
+1"
+b1 %
+#750
+1!
+b1 $
+#1000
+0!
+b10 %
+1#
+#1250
+1!
+b10 $
+#1500
+0!
+b0 %
+#1750
+1!
+b0 $
+0#
+#2000
+0!
+b1 %
+#2250
+1!
+b1 $
+#2500

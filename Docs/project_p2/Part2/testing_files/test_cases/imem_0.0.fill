@@ -1,0 +1,150 @@
+F0000000  // NOP  // Program for single packet read and write from processor       
+81400000  // load datamem[0] into R10    			//load packet to be sent out in register file
+82800001  // load datamem[1] into R20    			//load packet to be sent out in register file
+83C00002  // load datamem[2] into R30    			//load packet to be sent out in register file
+8020C003  // load NIC[3] into R1  					//read the output channel status register
+8C200010  // VBNEZ r1, 4                    //if full, read again until empty
+8540C002  // store r10 into NIC[2]					//send packet out to NIC
+8020C003  // load NIC[3] into r1  					//read the output channel status register
+8C20001c  // VBNEZ r1, 7                    //if full, read again until empty
+8680C002  // store r20 into NIC[2]					//send packet out to NIC
+8020C003  // load NIC[3] into r1  					//read the output channel status register
+8C200028  // VBNEZ R1, 10                   //if full, read again until empty
+87C0C002  // store R30 into NIC[2]				//send packet out to NIC
+8040C001  // load NIC[1] into R2					//read the input channel status register
+88400034  // VBEZ R2, 13                  //if empty, read again
+80A0C000  // store NIC[0] into R5
+8040C001  // load NIC[1] into R2					//read the input channel status register
+88400040  // VBEZ R2, 16
+81E0C000  // store NIC[0] into R15
+8040C001  // load NIC[1] into R2					//read the input channel status register
+8840004C  // VBEZ R2, 19
+8320C000  // store NIC[0] into R25
+84A00005  // VSD R5, 5                    //write R5 to datamem[5]
+85E00006  // VSD R15, 6                    //write R15 to datamem[6]
+87200007  // VSD R25, 7                    //write R25 to datamem[7]
+00000000  // NOP End Program 
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000

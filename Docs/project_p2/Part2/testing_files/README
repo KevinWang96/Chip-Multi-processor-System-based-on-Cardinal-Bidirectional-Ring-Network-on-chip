@@ -1,0 +1,35 @@
+EE577B Spring 2015
+Project Part 4
+--------------------
+
+README 
+------
+
+Steps:
+1. Copy imem.v, dmem.v, gscl45nm.v in the include/ directory.
+
+2. Copy the test bench tb_cmp.v in the tb/ directory. Testbench clock is set at 100ns.
+
+3. Copy test_cases/ directory in your simulation directory
+
+4. Copy makefile and runs.csh in your simulations directory 
+(This makefile is slightly different than what you have been using, does not print messages)
+
+5. Run the provided script file (./runs.csh). If the file doesn't execute, then 
+   % chmod u+x runs.csh
+   % ./runs.csh
+
+   6. At the end of the execution script, it will produce two files 
+   <YourUsername>.diff & <YourUsername>.log
+   The .log file is the output of ncsim, while diff files gathers differences between
+   the expected output and simulated output.
+
+7. Check the log file, if you see simulation finishing at 50us, then simulation did not   finish and diff command won't produce correct output.
+
+8. Some Info on the imem.fill files:-
+   Case 0: CMP test similar to Part3 golden file.
+   Case 1-18: to test a particular instruction from ISA
+   Case 19-38: All instructions Random
+   Case 39: All Instructions Random (special case)
+
+

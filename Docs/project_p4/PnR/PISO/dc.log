@@ -1,0 +1,211 @@
+######################################################################
+#
+# EE-577b 2019 FALL
+# : DesignCompiler synthesis script
+#   modified by Huimei Cheng
+#
+# use this script as a template for synthesizing combinational logic
+#
+######################################################################
+# Setting variable for design_name. (top module name)
+set design_name $env(DESIGN_NAME);
+PISO
+## For NCSUFreePDK45nm library
+set search_path [ list .                   /home/scf-22/ee577/NCSU45PDK/FreePDK45/osu_soc/lib/files ]
+. /home/scf-22/ee577/NCSU45PDK/FreePDK45/osu_soc/lib/files
+set target_library { gscl45nm.db }
+ gscl45nm.db 
+set synthetic_library [list dw_foundation.sldb standard.sldb ]
+dw_foundation.sldb standard.sldb
+set link_library [list * gscl45nm.db dw_foundation.sldb standard.sldb]
+* gscl45nm.db dw_foundation.sldb standard.sldb
+# Reading source verilog file.
+# copy your verilog file into ./src/ before synthesis.
+read_verilog ./src/${design_name}.v ;
+Loading db file '/home/scf-22/ee577/NCSU45PDK/FreePDK45/osu_soc/lib/files/gscl45nm.db'
+Loading db file '/usr/local/synopsys/Design_Compiler/default/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/local/synopsys/Design_Compiler/default/libraries/syn/standard.sldb'
+Loading db file '/usr/local/synopsys/Design_Compiler/default/libraries/syn/gtech.db'
+  Loading link library 'gscl45nm'
+  Loading link library 'gtech'
+Loading verilog file '/home/viterbi/04/sooryara/ee577/PISO/src/PISO.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/viterbi/04/sooryara/ee577/PISO/src/PISO.v
+
+Inferred memory devices in process
+        in routine PISO line 16 in file
+                '/home/viterbi/04/sooryara/ee577/PISO/src/PISO.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      temp_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/viterbi/04/sooryara/ee577/PISO/src/PISO.db:PISO'
+Loaded 1 design.
+Current design is 'PISO'.
+PISO
+# Setting $design_name as current working design.
+# Use this command before setting any constraints.
+current_design $design_name ;
+Current design is 'PISO'.
+{PISO}
+# If you have multiple instances of the same module,
+# use this so that DesignCompiler optimizes each instance separately.
+uniquify ;
+1
+# Linking your design into the cells in standard cell libraries.
+# This command checks whether your design can be compiled
+link ;
+
+  Linking design 'PISO'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  PISO                        /home/viterbi/04/sooryara/ee577/PISO/src/PISO.db
+  gscl45nm (library)          /home/scf-22/ee577/NCSU45PDK/FreePDK45/osu_soc/lib/files/gscl45nm.db
+  dw_foundation.sldb (library) /usr/local/synopsys/Design_Compiler/default/libraries/syn/dw_foundation.sldb
+
+1
+# Create a clock with period of 5.
+create_clock -name clk -period 5.0 -waveform [list 0 2.5] [get_ports clk]
+1
+# Setting timing constraints for combinational logic.
+# Specifying maximum delay from inputs to outputs
+set_max_delay 5.0 -to [all_outputs];
+1
+set_max_delay 5.0 -from [all_inputs];
+1
+# "check_design" checks the internal representation of the
+# current design for consistency and issues error and
+# warning messages as appropriate.
+check_design > report/$design_name.check_design ;
+# Perforing synthesis and optimization on the current_design.
+compile ;
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.5.2
+                                                               |     *     |
+| Licensed DW Building Blocks        | K-2015.06-DWBB_201506.5.2
+                                                               |           |
+============================================================================
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'PISO'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     115.4      0.00       0.0       0.0                          
+    0:00:00     115.4      0.00       0.0       0.0                          
+    0:00:00     115.4      0.00       0.0       0.0                          
+    0:00:00     115.4      0.00       0.0       0.0                          
+    0:00:00     115.4      0.00       0.0       0.0                          
+    0:00:00     110.8      0.00       0.0       0.0                          
+    0:00:00     110.8      0.00       0.0       0.0                          
+    0:00:00     110.8      0.00       0.0       0.0                          
+    0:00:00     110.8      0.00       0.0       0.0                          
+    0:00:00     110.8      0.00       0.0       0.0                          
+    0:00:00     110.8      0.00       0.0       0.0                          
+    0:00:00     110.8      0.00       0.0       0.0                          
+    0:00:00     110.8      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     110.8      0.00       0.0       0.0                          
+    0:00:00     110.8      0.00       0.0       0.0                          
+    0:00:00     110.8      0.00       0.0       0.0                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     110.8      0.00       0.0       0.0                          
+    0:00:01     127.2      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     127.2      0.00       0.0       0.0                          
+    0:00:01     127.2      0.00       0.0       0.0                          
+    0:00:01     127.2      0.00       0.0       0.0                          
+    0:00:01     127.2      0.00       0.0       0.0                          
+    0:00:01     127.2      0.00       0.0       0.0                          
+    0:00:01     127.2      0.00       0.0       0.0                          
+    0:00:01     127.2      0.00       0.0       0.0                          
+    0:00:01     127.2      0.00       0.0       0.0                          
+    0:00:01     127.2      0.00       0.0       0.0                          
+    0:00:01     127.2      0.00       0.0       0.0                          
+    0:00:01     127.2      0.00       0.0       0.0                          
+Loading db file '/home/scf-22/ee577/NCSU45PDK/FreePDK45/osu_soc/lib/files/gscl45nm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+# For better synthesis result, use "compile_ultra" command.
+# compile_ultra is doing automatic ungrouping during optimization,
+# therefore sometimes it's hard to figure out the critical path 
+# from the synthesized netlist.
+# So, use "compile" command for now.
+# Writing the synthesis result into Synopsys db format.
+# You can read the saved db file into DesignCompiler later using
+# "read_db" command for further analysis (timing, area...).
+#write -xg_force_db -format db -hierarchy -out db/$design_name.db ;
+# Generating timing and are report of the synthezied design.
+report_timing > report/$design_name.timing ;
+report_area > report/$design_name.area ;
+# Writing synthesized gate-level verilog netlist.
+# This verilog netlist will be used for post-synthesis gate-level simulation.
+change_names -rules verilog -hierarchy ;
+1
+write -format verilog -hierarchy -out netlist/$design_name.syn.v ;
+Writing verilog file '/home/viterbi/04/sooryara/ee577/PISO/netlist/PISO.syn.v'.
+1
+# Writing Standard Delay Format (SDF) back-annotation file.
+# This delay information can be used for post-synthesis simulation.
+write_sdf netlist/$design_name.sdf;
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/viterbi/04/sooryara/ee577/PISO/netlist/PISO.sdf'. (WT-3)
+1
+write_sdc netlist/$design_name.sdc
+1
+1
+dc_shell> quit
+
+Thank you...
+

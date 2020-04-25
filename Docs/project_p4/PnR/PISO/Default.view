@@ -1,0 +1,7 @@
+# Version:1.0 MMMC View Definition File
+# Do Not Remove Above Line
+create_library_set -name gscl45nm_ls -timing {include/gscl45nm.tlf}
+create_constraint_mode -name test_cm -sdc_files {netlist/frequency_divider_by3.sdc}
+create_delay_corner -name gscl45nm_dc -library_set {gscl45nm_ls}
+create_analysis_view -name freq_av -constraint_mode {test_cm} -delay_corner {gscl45nm_dc}
+set_analysis_view -setup {freq_av} -hold {freq_av}

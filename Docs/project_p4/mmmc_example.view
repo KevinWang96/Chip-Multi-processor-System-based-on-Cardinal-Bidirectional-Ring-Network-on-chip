@@ -1,0 +1,7 @@
+# Version:1.0 MMMC View Definition File
+# This file is just an example. Please do not take this file seriously. You need to modify this file to do P&R of your design properly.
+create_library_set -name NCSU45 -timing {/home/scf-22/ee577/NCSU45PDK/FreePDK45/osu_soc/lib/files/gscl45nm.lib}
+create_delay_corner -name NCSU45 -library_set {NCSU45}
+create_constraint_mode -name yourSDC -sdc_files {yourSDC.sdc}
+create_analysis_view -name yourSDC -delay_corner NCSU45 -constraint_mode {yourSDC}
+set_analysis_view -setup {yourSDC} -hold {yourSDC}
