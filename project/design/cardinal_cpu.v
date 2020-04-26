@@ -1,7 +1,7 @@
 /*
  * @Author: Yihao Wang
  * @Date: 2020-03-12 02:04:23
- * @LastEditTime: 2020-04-20 18:37:44
+ * @LastEditTime: 2020-04-26 00:58:55
  * @LastEditors: Please set LastEditors
  * @Description: Cardinal Processor with 32-bit address, 32-bit instruction and 64-bit data
  * @FilePath: /EE577b_final_project/project_p2/design/processor_top.v
@@ -184,30 +184,28 @@
         endcase
     end
 
-    // Intent to stall
-    // If there is a SD or a LD (rD is not $0), we have the intent to stall in next stage
-    // this signal is used to control the stall flag register
-    wire intent_to_stall_id;
-    assign intent_to_stall_id = ((opcode_id == M_TYPE_SD) || ((opcode_id == M_TYPE_LD) && (rD_id != 0)));
-
     // Intention for 5-clock ALU stall
-    // For DIV, SQRT,
-    wire intent_to_alu_stall5_id;
-    assign intent_to_alu_stall5_id = ( (opcode_id == R_TYPE_ALU) && ((func_code_id == VDIV) || (func_code_id == VSQRT))  && (rD_id != 0) ) ? 1'b1 : 1'b0;
-
-    // Intention for 4-clock ALU stall
-    // For MULT, SQ, MOD, 
-    wire intent_to_alu_stall4_id;
-    assign intent_to_alu_stall4_id = ( (opcode_id == R_TYPE_ALU) 
-        && ((func_code_id == VMULEU) || (func_code_id == VMULOU) || (func_code_id == VMOD) || (func_code_id == VSQEU) || (func_code_id == VSQOU))  
-            && (rD_id != 0) ) ? 1'b1 : 1'b0;
+    // For DIV, SQRT, MOD
+    wire intent_to_stall5_id;
+    assign intent_to_stall5_id = ( (opcode_id == R_TYPE_ALU) && ((func_code_id == VDIV) || (
+        func_code_id == VSQRT) || (func_code_id == VMOD))  && (rD_id != 0) );
 
     // Intention for 3-clock ALU stall
-    // For ADD, SUB, SRL, SLL, SRA 
-    wire intent_to_alu_stall3_id;
-    assign intent_to_alu_stall3_id = ( (opcode_id == R_TYPE_ALU) 
-        && ((func_code_id == VADD) || (func_code_id == VSUB) || (func_code_id == VSLL) || (func_code_id == VSRL) || (func_code_id == VSRA))  
-            && (rD_id != 0) ) ? 1'b1 : 1'b0;
+    // For MULT, SQ,
+    wire intent_to_stall3_id;
+    assign intent_to_stall3_id = ( (opcode_id == R_TYPE_ALU) 
+        && ((func_code_id == VMULEU) || (func_code_id == VMULOU) || (func_code_id == VSQEU) || (func_code_id == VSQOU))  
+            && (rD_id != 0) );
+
+    // Intention for 2-clock stall (both ALU ane memory access stall)
+    // For ADD, SUB, LD, SD
+    wire intent_to_stall2_id;
+    assign intent_to_stall2_id = ( ((opcode_id == R_TYPE_ALU) && ((func_code_id == VADD) || (func_code_id == VSUB)) && (rD_id != 0)) 
+        || ((opcode_id == M_TYPE_LD) && (rD_id != 0)) || (opcode_id == M_TYPE_SD) );
+
+    // Intent to stall 
+    wire intent_to_stall_id;
+    assign intent_to_stall_id = intent_to_stall5_id & intent_to_stall3_id & intent_to_stall2_id;
 
     // Generates register file read address of port 0 and port 1
     always @(*)
@@ -344,7 +342,7 @@
 
 
     // ID/EX_MEM stage register
-    reg [0:154] ID_EXM_reg;
+    reg [0:152] ID_EXM_reg;
 
     always @(posedge clk)
     begin
@@ -356,16 +354,14 @@
             begin
                 ID_EXM_reg[0:63] <= RF_rd_do_0_mux;
                 ID_EXM_reg[64:127] <= RF_rd_do_1_mux;
-                ID_EXM_reg[128] <= intent_to_stall_id;
-                ID_EXM_reg[129:133] <= rD_id;
-                ID_EXM_reg[134:136] <= ppp_id;
-                ID_EXM_reg[137:138] <= ww_id;
-                ID_EXM_reg[139:144] <= func_code_id;
-                ID_EXM_reg[145:146] <= imm_addr_id[14:15];
-                ID_EXM_reg[147:151] <= {dmem_En_id, dmem_WrEn_id, nic_En_id, nic_WrEn_id, RF_WrEn_id};
-                ID_EXM_reg[152] <= intent_to_alu_stall5_id;
-                ID_EXM_reg[153] <= intent_to_alu_stall4_id;
-                ID_EXM_reg[154] <= intent_to_alu_stall3_id;
+                ID_EXM_reg[128:132] <= rD_id;
+                ID_EXM_reg[133:135] <= ppp_id;
+                ID_EXM_reg[136:137] <= ww_id;
+                ID_EXM_reg[138:143] <= func_code_id;
+                ID_EXM_reg[144:145] <= imm_addr_id[14:15];
+                ID_EXM_reg[146:150] <= {dmem_En_id, dmem_WrEn_id, nic_En_id, nic_WrEn_id, RF_WrEn_id};
+                ID_EXM_reg[151] <= intent_to_stall3_id;
+                ID_EXM_reg[152] <= intent_to_stall2_id;
             end
     end
 
@@ -373,23 +369,21 @@
 // EX_MEM stage:
     
     wire dmem_En_exm, dmem_WrEn_exm, nic_En_exm, nic_WrEn_exm;
-    wire intent_to_stall_exm, intent_to_alu_stall5_exm, intent_to_alu_stall4_exm, intent_to_alu_stall3_exm;
+    wire intent_to_stall3_exm, intent_to_stall2_exm;
     wire [0:63] RF_rd_do_0_exm, RF_rd_do_1_exm; // two ALU data input
     wire [0:5] func_code_exm;
     wire [0:1] ww_exm;
     wire [0:1] nic_addr; // address for nic
 
-    assign intent_to_stall_exm = ID_EXM_reg[128];
-    assign rD_exm = ID_EXM_reg[129:133];
-    assign ppp_exm = ID_EXM_reg[134:136];
-    assign ww_exm = ID_EXM_reg[137:138];
-    assign func_code_exm = ID_EXM_reg[139:144];
-    assign nic_addr = ID_EXM_reg[145:146]; // address of NIC
     assign nic_data_out = ID_EXM_reg[0:63]; // data input of NIC
-    assign {dmem_En_exm, dmem_WrEn_exm, nic_En_exm, nic_WrEn_exm, RF_WrEn_exm} = ID_EXM_reg[147:151];
-    assign intent_to_alu_stall5_exm = ID_EXM_reg[152];
-    assign intent_to_alu_stall4_exm = ID_EXM_reg[153];
-    assign intent_to_alu_stall3_exm = ID_EXM_reg[154];
+    assign rD_exm = ID_EXM_reg[128:132];
+    assign ppp_exm = ID_EXM_reg[133:135];
+    assign ww_exm = ID_EXM_reg[136:137];
+    assign func_code_exm = ID_EXM_reg[138:143];
+    assign nic_addr = ID_EXM_reg[144:145]; // address of NIC
+    assign {dmem_En_exm, dmem_WrEn_exm, nic_En_exm, nic_WrEn_exm, RF_WrEn_exm} = ID_EXM_reg[146:150];
+    assign intent_to_stall3_exm = ID_EXM_reg[151];
+    assign intent_to_stall2_exm = ID_EXM_reg[152];
 
     // ouput nic control signals
     assign nic_En = nic_En_exm;
@@ -409,103 +403,37 @@
     );
 
 
-    // Generates stall_for_mem signal
-    // If there is a LD or SD in EX_MEM stage, we should stall the whole pipeline
-    // we use a flag to achieve 1 clocks stalling
-    reg stall_reg_for_mem;
-    reg stall_for_mem; // stall signal for memory access
+    // Stall_control_unit (SCU)
+    // Using 5-state FSM to implement
+    reg [0:2] SCU_state;
+    localparam  SCU_STATE_0 = 3'b000, // definition of states
+                SCU_STATE_1 = 3'b001,
+                SCU_STATE_2 = 3'b010,
+                SCU_STATE_3 = 3'b011,
+                SCU_STATE_4 = 3'b100;
+
     always @(posedge clk)
     begin
-        if(reset) stall_reg_for_mem <= 0;
+        if(reset) SCU_state <= SCU_STATE_0;
         else
-            // if there is a LD, and the rD is $0, we don't need to stall
-            if(intent_to_stall_exm == 1) 
-                stall_reg_for_mem <= ~ stall_reg_for_mem;
+            case(SCU_state)
+                SCU_STATE_0 : 
+                    if(intent_to_stall_id) SCU_state <= SCU_STATE_1;
+                SCU_STATE_1 :
+                    if(intent_to_stall2_exm) SCU_state <= SCU_STATE_0;
+                    else SCU_state <= SCU_STATE_2;
+                SCU_STATE_2 :
+                    if(intent_to_stall3_exm) SCU_state <= SCU_STATE_0;
+                    else SCU_state <= SCU_STATE_3;
+                SCU_STATE_3 :
+                    SCU_state <= SCU_STATE_4;
+                SCU_STATE_4 :
+                    SCU_state <= SCU_STATE_0;
+            endcase
     end
+    // Generates global stall signal
+    assign stall = (SCU_state != SCU_STATE_0);
     
-    // if we find a LD(rD is not $0) or a SD, and if flag is 0, we need enble stall signal
-    always @(*)
-    begin
-        stall_for_mem = 0;
-        if((intent_to_stall_exm == 1) && (stall_reg_for_mem == 0))
-            stall_for_mem = 1;
-    end
-
-    // Generates 5-clock stall_for_alu signal
-    // For complex ALU operation, using 5-clock stalling like DIV and SQRT
-    reg [0:2] stall5_reg_for_alu;
-    reg stall5_for_alu;
-    // 5-stage counter: 0 -> 1 -> 2 -> 3 -> 4 -> 0 ..
-    always @(posedge clk)
-    begin   
-        if(reset) stall5_reg_for_alu <= 0;
-        else
-        begin
-            if(intent_to_alu_stall5_exm == 1) 
-            begin
-                if(stall5_reg_for_alu == 4) stall5_reg_for_alu <= 0;
-                else stall5_reg_for_alu <= stall5_reg_for_alu + 1;
-            end
-        end
-    end
-    always @(*)
-    begin
-        stall5_for_alu = 0;
-        if( (intent_to_alu_stall5_exm == 1) && 
-            ( (stall5_reg_for_alu == 0) || (stall5_reg_for_alu == 1) || (stall5_reg_for_alu == 2) || (stall5_reg_for_alu == 3)))
-            stall5_for_alu = 1;
-    end
-
-
-    // Generates 4-clock stall_for_alu signal
-    // For complex ALU operation, using 4-clock stalling, like MULT, MOD, SQ
-    reg [0:1] stall4_reg_for_alu;
-    reg stall4_for_alu;
-    // 4-stage counter: 0 -> 1 -> 2 -> 3 -> 0 ..
-    always @(posedge clk)
-    begin   
-        if(reset) stall4_reg_for_alu <= 0;
-        else
-            if(intent_to_alu_stall4_exm == 1) stall4_reg_for_alu <= stall4_reg_for_alu + 1;
-    end
-    always @(*)
-    begin
-        stall4_for_alu = 0;
-        if( (intent_to_alu_stall4_exm == 1) && 
-            ( (stall4_reg_for_alu == 0) || (stall4_reg_for_alu == 1) || (stall4_reg_for_alu == 2) ) )
-            stall4_for_alu = 1;
-    end
-
-
-    // Generates 3-clock stall_for_alu signal
-    // For complex ALU operation, using 3-clock stalling, like ADD, SUB, SLL, SRL, SRA
-    reg [0:1] stall3_reg_for_alu;
-    reg stall3_for_alu;
-    // 3-stage counter: 0 -> 1 -> 2 -> 0 ..
-    always @(posedge clk)
-    begin   
-        if(reset) stall3_reg_for_alu <= 0;
-        else
-        begin
-            if(intent_to_alu_stall3_exm == 1) 
-            begin
-                if(stall3_reg_for_alu == 2) stall3_reg_for_alu <= 0;
-                else stall3_reg_for_alu <= stall3_reg_for_alu + 1;
-            end
-        end
-    end
-    always @(*)
-    begin
-        stall3_for_alu = 0;
-        if( (intent_to_alu_stall3_exm == 1) && 
-            ( (stall3_reg_for_alu == 0) || (stall3_reg_for_alu == 1) ))
-            stall3_for_alu = 1;
-    end
-
-
-    // Generates stall signal
-    assign stall = (stall5_for_alu || stall4_for_alu || stall3_for_alu || stall_for_mem) ? 1'b1 : 1'b0;
-
 
     // Register File write data MUX
     // write data may from ALU results. NIC and Data Memory

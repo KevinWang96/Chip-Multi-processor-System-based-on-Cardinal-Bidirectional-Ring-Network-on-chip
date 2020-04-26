@@ -1,0 +1,287 @@
+Running Test # 0 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_0.0.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_0.1.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_0.2.dump cmp_test.dmem2.dump
+Files /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_0.2.dump and cmp_test.dmem2.dump differ
+7,8c7,8
+< Memory location #          6 : 4000000300000cc2 
+< Memory location #          7 : c000000000000ccc 
+---
+> Memory location #          6 : c000000000000ccc 
+> Memory location #          7 : 4000000300000cc2 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_0.3.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 1 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_1.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_1.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_1.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_1.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 2 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_2.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_2.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_2.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_2.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 3 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_3.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_3.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_3.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_3.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 4 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_4.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_4.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_4.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_4.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 5 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_5.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_5.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_5.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_5.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 6 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_6.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_6.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_6.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_6.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 7 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_7.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_7.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_7.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_7.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 8 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_8.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_8.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_8.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_8.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 9 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_9.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_9.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_9.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_9.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 10 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_10.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_10.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_10.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_10.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 11 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_11.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_11.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_11.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_11.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 12 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_12.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_12.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_12.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_12.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 13 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_13.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_13.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_13.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_13.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 14 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_14.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_14.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_14.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_14.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 15 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_15.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_15.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_15.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_15.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 16 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_16.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_16.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_16.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_16.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 17 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_17.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_17.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_17.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_17.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 18 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_18.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_18.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_18.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_18.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 19 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_19.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_19.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_19.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_19.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 20 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_20.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_20.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_20.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_20.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 21 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_21.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_21.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_21.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_21.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 22 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_22.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_22.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_22.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_22.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 23 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_23.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_23.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_23.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_23.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 24 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_24.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_24.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_24.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_24.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 25 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_25.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_25.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_25.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_25.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 26 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_26.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_26.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_26.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_26.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 27 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_27.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_27.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_27.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_27.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 28 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_28.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_28.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_28.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_28.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 29 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_29.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_29.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_29.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_29.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 30 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_30.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_30.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_30.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_30.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 31 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_31.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_31.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_31.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_31.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 32 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_32.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_32.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_32.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_32.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 33 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_33.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_33.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_33.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_33.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 34 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_34.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_34.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_34.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_34.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 35 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_35.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_35.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_35.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_35.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 36 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_36.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_36.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_36.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_36.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 37 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_37.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_37.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_37.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_37.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 38 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_38.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_38.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_38.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_38.dump cmp_test.dmem3.dump
+ 
+ 
+Running Test # 39 
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_39.dump cmp_test.dmem0.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_39.dump cmp_test.dmem1.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_39.dump cmp_test.dmem2.dump
+diff --brief --ignore-all-space /home/viterbi/00/yihao/ee577b/EE577b_final_project/project_p4_sim/test_cases/expected_dmem_39.dump cmp_test.dmem3.dump
+ 
+ 

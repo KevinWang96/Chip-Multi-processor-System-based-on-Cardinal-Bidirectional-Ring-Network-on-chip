@@ -2,7 +2,7 @@
 /*
  * @Author: Yihao Wang
  * @Date: 2020-03-09 20:46:57
- * @LastEditTime: 2020-04-20 18:37:55
+ * @LastEditTime: 2020-04-26 01:01:51
  * @LastEditors: Please set LastEditors
  * @Description: Cardinal Bidirectional Ring NoC supporting 4 devices
  * @FilePath: /EE577b_final_project/project_p1/design/gold_ring.v
@@ -46,7 +46,7 @@ module gold_ring
     reg polarity;
     always @(posedge clk)
     begin
-        if(reset) polarity <= 1; // reset to odd  polarity
+        if(reset) polarity <= 0; // reset to odd  polarity
         else polarity <= ~ polarity;
     end
     

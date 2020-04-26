@@ -1,3 +1,5 @@
+// Includes simulation model of DesignWare. 
+// If do synthesis, please comments all simulation model
 // `include "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW01_addsub.v"
 // `include "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW02_mult.v"
 // `include "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW_div.v"
@@ -5,9 +7,9 @@
 // `include "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW_shifter.v"
 `define DATA_WIDTH 64
 /*
- * @Author: Yihao Wang
+ * @Author: Yihao Wang, Aditya Pharande
  * @Date: 2020-03-11 20:02:17
- * @LastEditTime: 2020-04-20 18:39:13
+ * @LastEditTime: 2020-04-26 01:13:05
  * @LastEditors: Please set LastEditors
  * @Description: 
         64-bit ALU supporting variable-width operations
