@@ -7,9 +7,9 @@
 `include "/usr/local/synopsys/Design_Compiler/K-2015.06-SP5-5/dw/sim_ver/DW_shifter.v"
 `define DATA_WIDTH 64
 /*
- * @Author: Yihao Wang, Aditya Pharande
+ * @Author: Yihao Wang
  * @Date: 2020-03-11 20:02:17
- * @LastEditTime: 2020-04-22 18:19:45
+ * @LastEditTime: 2020-04-27 16:22:01
  * @LastEditors: Please set LastEditors
  * @Description: 
         64-bit ALU supporting variable-width operations
