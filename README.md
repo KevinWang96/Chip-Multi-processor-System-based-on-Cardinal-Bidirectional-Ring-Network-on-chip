@@ -1,14 +1,15 @@
 <!--
  * @Author: Yihao Wang
  * @Date: 2020-04-25 18:11:14
- * @LastEditTime: 2020-04-25 18:32:46
+ * @LastEditTime: 2020-04-26 23:25:14
  * @LastEditors: Please set LastEditors
  * @Description: README.md for entire project
  * @FilePath: /EE577b_final_project/README.md
  -->
  Chip Multi-processor System based on Cardinal Bidirectional Ring network-on-chip
- --------------------------------------------------------------------------------
-
+===========
+Contents:
+-----------
 ./Docs                      All documents and spec files related to this project;
 
 ./project/design            All design source files;
