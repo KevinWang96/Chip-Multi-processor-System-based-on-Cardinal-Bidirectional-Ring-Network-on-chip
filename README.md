@@ -1,7 +1,7 @@
 <!--
  * @Author: Yihao Wang
  * @Date: 2020-04-25 18:11:14
- * @LastEditTime: 2020-04-30 22:51:51
+ * @LastEditTime: 2020-05-01 06:24:55
  * @LastEditors: Please set LastEditors
  * @Description: README.md for entire project
  * @FilePath: /EE577b_final_project/README.md
@@ -10,7 +10,7 @@
 ===========
 ***Abstract***
 ----------
-This Cardinal 4-core chip multi-processor system is implemented based on Cardinal processor with 32-bit addr and 64-bit data and Cardinal 4-node ring NoC which support packet (VCT or wormhole) swithching. Cardinal NiC is network interface components   that that can be used to simplify packets changing between ring NoC and processoes. Each register or buffer of NiC can be   accessed using 2-bit memory address so memory instructions (LD or SW) can be used to access NiC and make it possible to tranfer message between different IP cores.
+This Cardinal 4-core chip multi-processor system is implemented based on Cardinal processor with 32-bit address and 64-bit data and Cardinal 4-node ring NoC which supports packet (VCT or wormhole) switching. Cardinal NiC is short for network interface components that can be used to simplify packets changing between ring NoC and processors. Each register or buffer of NiC can be accessed using 2-bit memory address so memory instructions (LD or SW) can be used to access NiC and make it possible to transfer messages between different IP cores.
 
 ***Block Diagram***
 ------------------
