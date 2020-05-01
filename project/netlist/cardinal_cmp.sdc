@@ -1,13 +1,13 @@
 ###################################################################
 
-# Created by write_sdc on Tue Apr 21 14:04:19 2020
+# Created by write_sdc on Wed Apr 22 20:15:08 2020
 
 ###################################################################
 set sdc_version 2.0
 
 set_units -time ns -resistance kOhm -capacitance pF -voltage V -current uA
 set_max_area 0
-create_clock [get_ports clk]  -period 3.5  -waveform {0 1.75}
+create_clock [get_ports clk]  -period 3  -waveform {0 1.5}
 set_multicycle_path 4 -hold -through [list [get_pins                           \
 {processor_0_alu_exm/do[0]}] [get_pins {processor_0_alu_exm/do[1]}] [get_pins  \
 {processor_0_alu_exm/do[2]}] [get_pins {processor_0_alu_exm/do[3]}] [get_pins  \

@@ -8,10 +8,10 @@
 /////////////////////////////////////////////////////////
 // Test Bench for the Cardinal Processor RTL Verification
 
-`timescale 1ns/10ps
+`timescale 1ns/1ps
 
 //Define the clock cycle
-`define CYCLE_TIME 4.05
+`define CYCLE_TIME 3.85
 
 // Include Files
 // `include "./design/cardinal_cmp.v"

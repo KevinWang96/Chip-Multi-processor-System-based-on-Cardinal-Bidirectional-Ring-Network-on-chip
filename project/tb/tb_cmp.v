@@ -11,7 +11,7 @@
 `timescale 1ns/10ps
 
 //Define the clock cycle
-`define CYCLE_TIME 100
+`define CYCLE_TIME 20
 
 // Include Files
 `include "./design/cardinal_cmp.v"
@@ -229,7 +229,7 @@ begin
 	// Let us see how much did you stall
 	$display("The program completed in %d cycles", cycle_number);
 	// Let us now flush the pipe line
-	repeat(30) @(negedge CLK);  // wait for all instruction finished
+	repeat(23) @(negedge CLK);  // wait for all instruction finished
 	// Open file for output
 	dmem0_dump_file = $fopen("cmp_test.dmem0.dump"); // assigning the channel descriptor for output file
 	dmem1_dump_file = $fopen("cmp_test.dmem1.dump"); // assigning the channel descriptor for output file
